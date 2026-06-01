@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vince Estrera — Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      :root {
+        --orange: #ff6a00;
+        --bg: #0f1724; /* softer dark background */
+        --muted: #cbd5e1;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial;
+        background: var(--bg);
+        color: var(--muted);
+        -webkit-font-smoothing: antialiased;
+      }
+      .header {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 106, 0, 0.06),
+          rgba(0, 0, 0, 0.6)
+        );
+      }
+      .btn-orange {
+        background: var(--orange);
+        color: #000;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 106, 0, 0.1);
+      }
+      .link {
+        color: var(--orange);
+      }
+      .project-item {
+        transition: 0.25s ease;
+      }
+      .project-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="max-w-4xl mx-auto p-6">
+      <header class="flex items-center justify-between py-6 header">
+        <div>
+          <h1 class="text-3xl font-bold" style="color: var(--orange)">
+            Vince Nixon Estrera
+          </h1>
+          <p class="text-sm text-gray-300">
+            BSIT 2-C Student — Database & Web Developer
+          </p>
+        </div>
+
+        <nav class="space-x-4 flex items-center">
+          <a href="#projects" class="btn-orange px-4 py-2 rounded-lg"
+            >Projects</a
+          >
+          <a
+            href="https://github.com/newbiee-ctrl"
+            target="_blank"
+            class="border border-orange-500 px-4 py-2 rounded-lg text-orange-400"
+            >GitHub</a
+          >
+          <span class="ml-3 text-sm text-gray-300"
+            >Repos: <strong id="repo-count">—</strong></span
+          >
+        </nav>
+      </header>
+
+      <section class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 card rounded-xl">
+          <h3 class="text-orange-400 font-semibold mb-3">Database</h3>
+          <ul class="space-y-2 text-gray-200">
+            <li>MySQL</li>
+            <li>Stored Procedures</li>
+            <li>Triggers</li>
+            <li>Views</li>
+            <li>Foreign Keys</li>
+            <li>Transaction Management</li>
+          </ul>
+        </div>
+
+        <div class="p-6 card rounded-xl">
+          <h3 class="text-orange-400 font-semibold mb-3">Web Development</h3>
+          <ul class="space-y-2 text-gray-200">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>PHP</li>
+          </ul>
+        </div>
+
+        <div class="p-6 card rounded-xl">
+          <h3 class="text-orange-400 font-semibold mb-3">Concepts</h3>
+          <ul class="space-y-2 text-gray-200">
+            <li>Database Design</li>
+            <li>CRUD Operations</li>
+            <li>Query Optimization</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="mt-8">
+        <h2 class="text-2xl font-semibold text-white mb-4">Projects</h2>
+        <div id="repos-container" class="grid md:grid-cols-2 gap-4">
+          <!-- Static fallback items (will be replaced by GitHub API results when available) -->
+          <div class="project-item p-4 rounded-lg card">
+            <a
+              class="link"
+              target="_blank"
+              href="https://github.com/newbiee-ctrl/IT223-Task-1-CREATING-STORED-PROC_ESTRERA-VINCE-NIXON_BSIT2C"
+              >IT223 Task 1 - Creating Stored Procedures</a
+            >
+          </div>
+
+          <div class="project-item p-4 rounded-lg card">
+            <a
+              class="link"
+              target="_blank"
+              href="https://github.com/newbiee-ctrl/IT223-TASK1-Creating-Triggers_ESTRERA-VINCE-NIXON_BSIT2C"
+              >IT223 Task 1 - Creating Triggers</a
+            >
+          </div>
+
+          <div class="project-item p-4 rounded-lg card">
+            <a
+              class="link"
+              target="_blank"
+              href="https://github.com/newbiee-ctrl/IT223-Task-1-Foreign-Key_ESTRERA-VINCE-NIXON_BSIT2C"
+              >IT223 Task 1 - Foreign Key</a
+            >
+          </div>
+
+          <div class="project-item p-4 rounded-lg card">
+            <a
+              class="link"
+              target="_blank"
+              href="https://github.com/newbiee-ctrl/it-223"
+              >IT223</a
+            >
+          </div>
+
+          <div class="project-item p-4 rounded-lg card">
+            <a
+              class="link"
+              target="_blank"
+              href="https://github.com/newbiee-ctrl/Task1_QueryOptimization_ESTRERA_BSIT2C"
+              >Task 1 - Query Optimization</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-10 p-6 text-sm text-gray-400 border-t border-gray-800">
+        <p>
+          Name: Vince Nixon Estrera • GitHub:
+          <a class="link" href="https://github.com/newbiee-ctrl" target="_blank"
+            >github.com/newbiee-ctrl</a
+          >
+        </p>
+      </footer>
+
+      <script>
+        (function () {
+          const username = "newbiee-ctrl";
+          const repoCountEl = document.getElementById("repo-count");
+          const reposContainer = document.getElementById("repos-container");
+
+          if (!repoCountEl || !reposContainer) return;
+
+          // Fetch user info for repo count
+          fetch(`https://api.github.com/users/${username}`)
+            .then((r) => r.json())
+            .then((user) => {
+              if (user && typeof user.public_repos === "number")
+                repoCountEl.textContent = user.public_repos;
+            })
+            .catch(() => {
+              repoCountEl.textContent = "—";
+            });
+
+          // Fetch repos (public) and render up to 20
+          fetch(
+            `https://api.github.com/users/${username}/repos?per_page=100&sort=updated`,
+          )
+            .then((r) => r.json())
+            .then((list) => {
+              if (!Array.isArray(list)) return;
+              reposContainer.innerHTML = "";
+              list.slice(0, 20).forEach((repo) => {
+                const div = document.createElement("div");
+                div.className = "project-item p-4 rounded-lg card";
+                const a = document.createElement("a");
+                a.className = "link";
+                a.href = repo.html_url;
+                a.target = "_blank";
+                a.rel = "noopener noreferrer";
+                a.textContent =
+                  repo.name +
+                  (repo.description ? " — " + repo.description : "");
+                div.appendChild(a);
+                reposContainer.appendChild(div);
+              });
+            })
+            .catch(() => {
+              // leave static fallback items if network fails
+            });
+        })();
+      </script>
+    </div>
+  </body>
+</html>
